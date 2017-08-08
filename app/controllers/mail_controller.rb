@@ -9,6 +9,7 @@ end
 def create
 	@user = User.create!(user_params)
 	json_response(@user, :created)
+	byebug
 end
 def show
     json_response(@user)

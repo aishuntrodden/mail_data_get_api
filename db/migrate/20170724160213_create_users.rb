@@ -1,4 +1,4 @@
-class CreateUsers < ActiveRecord::Migration
+class CreateUsers < ActiveRecord::Migration[5.1]
   def change
     create_table :users do |t|
       t.string :uid
@@ -9,7 +9,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :to
       t.string :body
       t.string :subject
-      t.datetime :oauth_expires_at
+      t.string :oauth_expires_at
 
       t.timestamps
     end
